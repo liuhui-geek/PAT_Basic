@@ -1,0 +1,8 @@
+num = input().split()
+n = int(num[0])
+m = int(num[1])%n
+arr = input().split()
+print(arr)
+ans1 = arr[(len(arr)-m):] + arr[:(len(arr)-m)]
+ans = " ".join(ans1)
+print(ans)

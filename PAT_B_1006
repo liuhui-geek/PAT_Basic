@@ -1,0 +1,21 @@
+n = int(input())
+i = 0
+ans = ""
+while n!=0:
+    re = n%10
+    n = n/10
+    n = int(n)
+    if i==0:
+        if re!=0:
+            for j in range(1,re+1):
+                ans += str(j)
+    elif i==1:
+        if re!=0:
+            for j in range(re):
+                ans = 'S'+ans
+    else:
+        for j in range(re):
+            ans = 'B'+ans
+    i = i+1
+print(ans)
+

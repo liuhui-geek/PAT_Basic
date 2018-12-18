@@ -1,0 +1,26 @@
+n = int(input())
+exist = set()
+ans = []
+num = input().split()
+for i in num:
+    i = int(i)
+    while (i != 1):
+        if (i % 2 == 0):
+            i = i / 2
+        else:
+            i = (3 * i + 1) / 2
+        i = int(i)
+        exist.add(i)
+for i in num:
+    i = int(i)
+    if int(i) in exist:
+        pass
+    else:
+        ans.append(i)
+ans.sort(reverse=True)
+if(len(ans)==1):
+    print(ans[0],end="")
+else:
+    for i in range(len(ans)-1):
+        print(ans[i],end=" ")
+    print(ans[i+1],end="")

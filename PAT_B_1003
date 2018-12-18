@@ -1,0 +1,12 @@
+import re
+n = int(input())
+for i in range(n):
+    pat = input()
+    if re.match(r'A*PA+TA*',pat):
+        a = re.split(r'[P|T]',pat)
+        if a[0]*len(a[1])==a[2]:
+            print('YES')
+        else:
+            print('NO')
+    else:
+        print('NO')
